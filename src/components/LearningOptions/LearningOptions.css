@@ -1,13 +1,17 @@
 .learning-options-container {
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+    
+    align-items: start;
+    justify-content: start;
   }
   
   .learning-option-button {
     padding: 0.5rem;
-    border-radius: 25px;
-    background: transparent;
-    border: 1px solid rgb(139, 139, 139);
-    margin: 3px;
+    border-radius: 5px;
+    background: #395a31;
+    border: none;
+    text-align: start !important;
+    color: white;
   }

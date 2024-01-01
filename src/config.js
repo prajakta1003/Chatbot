@@ -31,7 +31,7 @@ const config = {
       },
     },
     {
-      widgetName: "Links",
+      widgetName: "mentors",
       widgetFunc: (props) => <LinkList {...props} />,
       props: {
         options: [
@@ -43,15 +43,29 @@ const config = {
         
         ],
       },
+    },
+    {
+      widgetName: "focus",
+      widgetFunc: (props) => <LinkList {...props} />,
+      props: {
+        options: [
+    
+          {
+            text: "SciAstra believes that education should go beyond cracking competitive exams. Their focus is to foster critical thinking in students, moving beyond rote memorization for exam qualifications. They aspire to guide students to think like scientists.",
+            id: 3,
+          },
+        
+        ],
+      },
     }
   ],
-  botName: "LearningBot",
+  botName: "SciAstra",
   customStyles: {
     botMessageBox: {
-      backgroundColor: "#376B7E",
+      backgroundColor: "#85a27e",
     },
     chatButton: {
-      backgroundColor: "#376B7E",
+      backgroundColor: "#85a27e",
     },
   },
 };

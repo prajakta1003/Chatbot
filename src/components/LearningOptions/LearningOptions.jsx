@@ -11,12 +11,15 @@ const LearningOptions = (props) => {
     },
     {
       text: "How many mentors does SciAstra have",
-      handler: props.actionProvider.handleJavascriptList,
+      handler: props.actionProvider.handleMentors,
       id: 2,
     },
-    { text: "APIs", handler: () => {}, id: 3 },
-    { text: "Security", handler: () => {}, id: 4 },
-    { text: "Interview prep", handler: () => {}, id: 5 },
+    {
+      text: "What is the focus of SciAstra's education philosophy?",
+      handler: props.actionProvider.handleFocus,
+      id: 3,
+    },
+    
   ];
 
   const optionsMarkup = options.map((option) => (
