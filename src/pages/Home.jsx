@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import "./Home.css";
 import video from "../assets/rocketNew.mp4";
-import { Rocket } from "lucide-react";
+import { Menu, Rocket } from "lucide-react";
 import { Bot } from "lucide-react";
 import Chat from "../components/Chat/Chat";
 
 const Home = () => {
   const [showChat, setShowChat] = useState(false);
+
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
   return (
     <div className="main">
       <video autoPlay muted loop>
@@ -16,17 +22,20 @@ const Home = () => {
         <div className="logo">
           <Rocket />
         </div>
-        <div>
-          <ul className="nav-list">
+        <div className="navbar">
+          <div className="menu-toggle" onClick={toggleMenu} id="mobile-menu">
+            <Menu color="white" />
+          </div>
+          <ul className={`nav-list ${showMenu ? "active" : ""}`} id="nav-list">
             <li className="list-item">Research Institutes</li>
             <li className="list-item">Courses</li>
             <li className="list-item">Selections</li>
             <li className="list-item">Our Team</li>
             <li className="list-item">Resources</li>
             <li className="list-item">Contact Us</li>
+            <button className="login">Login</button>
           </ul>
         </div>
-        <button className="login">Login</button>
       </div>
       <div className="bottom-div">
         <h1>SciAstra</h1>
